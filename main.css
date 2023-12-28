@@ -1,0 +1,236 @@
+
+@font-face {
+    font-family: 'Rowdies';
+    src: url(webfonts/Rowdies-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Rowdies";
+    src: url(webfonts/Rowdies-Bold.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Rowdies";
+    src: url(webfonts/Rowdies-Light.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 300;
+}
+
+body * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E0DBCF;
+}
+
+
+body {
+    background-color: #010104;
+    font-family: "Rowdies", sans-serif;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #010104;
+}
+
+a:visited {
+    color: #010104;
+}
+
+#oqr {
+    background-image: linear-gradient(75deg, #2410AE, #6F00FF, #9D3007);
+}
+
+#membership {
+    background-image: linear-gradient(-135deg, #CB2D00, #E48700, #EF47B4);
+}
+
+#email {
+    background-image: linear-gradient(75deg, #C7B463, #48AEE9, #AD65FF);
+}
+
+#gumroad {
+    background-image: linear-gradient(75deg, #D570D4, #8798FF, #1AC0B4);
+}
+
+.white-bg {
+    background-color: #E0DBCF;
+    color: #010104;
+    font-weight: 300;
+}
+
+.white-bg * {
+    color: inherit;
+    font-weight: inherit;
+}
+
+header {
+    width: 100%;
+    height: 30%;
+    position: relative;
+}
+
+#logotype {
+    position: absolute;
+}
+
+#logotype img {
+    display: block;
+    max-width: 90%;
+    max-height: 18em;
+}
+
+#dot-suffix-badge {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    height: 2em;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    top: 4em;
+}
+
+#dot-suffix-badge img {
+    position: relative;
+    height: 2em;
+    bottom: 0;
+    transition: bottom 0.2s;
+    -webkit-transition: bottom 0.2s;
+}
+
+header>a:hover #dot-suffix-badge img {
+    bottom: 2em;
+}
+
+main {
+    flex-flow: row wrap;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+main>* {
+    flex: 1 1 30%;
+    position: relative;
+    flex-flow: column wrap;
+    min-height: 15em;
+    width: 100%;
+    text-align: center;
+    transition: flex 0.5s;
+    -webkit-transition: flex 0.5s;
+    overflow: hidden;
+}
+
+main>a:hover {
+    flex: 3 3 30%;
+}
+
+main>a picture {
+    position: relative;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+main>a::before {
+    content: "";
+    position: absolute;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    right: 100%;
+    background-image: linear-gradient(80deg, #FFFFFF00, #E0DBCF22);
+    transition: right 0.5s;
+    -webkit-transition: right 0.5s;
+}
+
+main>a:hover::before {
+    right: -150%;
+}
+
+main img {
+    position: relative;
+    max-width: 75%;
+    max-height: 10em;
+}
+
+main div.socials {
+    z-index: 2;
+}
+
+.socials {
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 1em 0;
+    position: relative;
+    justify-content: space-around;
+}
+
+.socials a {
+    flex-flow: column nowrap;
+    position: relative;
+    flex: 1 1 20%;
+}
+
+.socials img {
+    width: 2em;
+    height: 2em;
+}
+
+.socials a span {
+    color: #E0DBCF;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    position: relative;
+    padding: 1em;
+    overflow: hidden;
+    display: block;
+}
+
+.socials a::before {
+    content: "";
+    background-color: #010104;
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: right 0.2s;
+}
+
+.socials a:hover::before {
+    right: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 90%;
+    min-height: 5em;
+    text-align: center;
+    font-weight: 300;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    #logotype img {
+        max-width: 100%;
+    }
+    main {
+        flex-flow: column nowrap;
+    }
+}
